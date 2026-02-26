@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>bundleid</key>
+  <string>com.lessismore.alfred.chatgptsender</string>
+  <key>category</key>
+  <string>Productivity</string>
+  <key>connections</key>
+  <dict>
+    <key>3C9D20A4-9DDE-4BBE-8A35-0F98F0017A11</key>
+    <array>
+      <dict>
+        <key>destinationuid</key>
+        <string>8B4DA5F5-42C9-4FF4-A2B4-9278B947B822</string>
+        <key>modifiers</key>
+        <integer>0</integer>
+        <key>modifiersubtext</key>
+        <string></string>
+      </dict>
+    </array>
+    <key>F8A4B1F2-0B30-40F3-8AF2-6697A4A09A10</key>
+    <array>
+      <dict>
+        <key>destinationuid</key>
+        <string>8B4DA5F5-42C9-4FF4-A2B4-9278B947B822</string>
+        <key>modifiers</key>
+        <integer>0</integer>
+        <key>modifiersubtext</key>
+        <string></string>
+      </dict>
+    </array>
+  </dict>
+  <key>createdby</key>
+  <string>Codex</string>
+  <key>description</key>
+  <string>Send text from Alfred to ChatGPT macOS app.</string>
+  <key>disabled</key>
+  <false/>
+  <key>name</key>
+  <string>Send to ChatGPT App</string>
+  <key>objects</key>
+  <array>
+    <dict>
+      <key>config</key>
+      <dict>
+        <key>argumenttype</key>
+        <integer>1</integer>
+        <key>keyword</key>
+        <string>cgp</string>
+        <key>subtext</key>
+        <string>输入后回车发送到 ChatGPT macOS 客户端</string>
+        <key>text</key>
+        <string>Send to ChatGPT</string>
+        <key>withspace</key>
+        <true/>
+      </dict>
+      <key>type</key>
+      <string>alfred.workflow.input.keyword</string>
+      <key>uid</key>
+      <string>3C9D20A4-9DDE-4BBE-8A35-0F98F0017A11</string>
+      <key>version</key>
+      <integer>1</integer>
+    </dict>
+    <dict>
+      <key>config</key>
+      <dict>
+        <key>text</key>
+        <string>Send to ChatGPT: '{query}'</string>
+      </dict>
+      <key>type</key>
+      <string>alfred.workflow.trigger.fallback</string>
+      <key>uid</key>
+      <string>F8A4B1F2-0B30-40F3-8AF2-6697A4A09A10</string>
+      <key>version</key>
+      <integer>1</integer>
+    </dict>
+    <dict>
+      <key>config</key>
+      <dict>
+        <key>escaping</key>
+        <integer>102</integer>
+        <key>concurrently</key>
+        <false/>
+        <key>script</key>
+        <string>./send_to_chatgpt.sh "$1"</string>
+        <key>scriptargtype</key>
+        <integer>1</integer>
+        <key>scriptfile</key>
+        <string></string>
+        <key>type</key>
+        <integer>11</integer>
+      </dict>
+      <key>type</key>
+      <string>alfred.workflow.action.script</string>
+      <key>uid</key>
+      <string>8B4DA5F5-42C9-4FF4-A2B4-9278B947B822</string>
+      <key>version</key>
+      <integer>2</integer>
+    </dict>
+  </array>
+  <key>readme</key>
+  <string>Keyword: cgp</string>
+  <key>uidata</key>
+  <dict>
+    <key>3C9D20A4-9DDE-4BBE-8A35-0F98F0017A11</key>
+    <dict>
+      <key>xpos</key>
+      <real>40</real>
+      <key>ypos</key>
+      <real>80</real>
+    </dict>
+    <key>8B4DA5F5-42C9-4FF4-A2B4-9278B947B822</key>
+    <dict>
+      <key>xpos</key>
+      <real>280</real>
+      <key>ypos</key>
+      <real>80</real>
+    </dict>
+    <key>F8A4B1F2-0B30-40F3-8AF2-6697A4A09A10</key>
+    <dict>
+      <key>xpos</key>
+      <real>40</real>
+      <key>ypos</key>
+      <real>220</real>
+    </dict>
+  </dict>
+  <key>version</key>
+  <string>0.1</string>
+  <key>webaddress</key>
+  <string></string>
+</dict>
+</plist>
